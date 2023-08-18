@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../node_modules/@prisma/registration"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("REGISTRATION_DATABASE_URL")
+}
+
+model Registration {
+    pk          Int      @id @default(autoincrement())
+    id          String   @unique @default(uuid()) @db.Uuid
+    email       String   
+    name        String
+    createdAt   DateTime @default(now()) @map("created_at")
+    updatedAt   DateTime @updatedAt @map("update_at")
+    @@unique([pk, id])
+    @@map("registrations")
+}
