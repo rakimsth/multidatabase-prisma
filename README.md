@@ -2,23 +2,25 @@
 
 In scripts field of our package.json file we added:
 
-1. postgres:migrate:dev: this would be used to create and execute migrations on our postgres database.
+1. postgres:migrate:app-dev: this would be used to create and execute migrations on our first postgres database.
 
-2. postgres:migrate:dev:create: this would create a postgres migration file which you can edit before executing.
+2. postgres:migrate:registration-dev: this would be used to create and execute migrations on our second postgres database.
 
-3. prisma: this is the prisma cli so we can run commands straight from prisma-cli.
+3. postgres:migrate:dev:create: this would create a postgres migration file which you can edit before executing.
 
-4. postgres:migrate:deploy: this applies pending migrations to staging, testing, or production environments to your postgres database.
+4. prisma: this is the prisma cli so we can run commands straight from prisma-cli.
 
-5. prisma:app:dbpush: this syncs the prisma/app/shema.prisma with the postgres database called app.
+5. postgres:migrate:deploy: this applies pending migrations to staging, testing, or production environments to your postgres database.
 
-6. prisma:registration:dbpush: this syncs the prisma/registration/shema.prisma with the postgres database called registration.
+6. prisma:app:dbpush: this syncs the prisma/app/shema.prisma with the postgres database called app.
 
-7. prisma:generate:registration_client: this would generate the prima client for registration postgres database.
+7. prisma:registration:dbpush: this syncs the prisma/registration/shema.prisma with the postgres database called registration.
 
-8. prisma:generate:app_client: this would generate the prisma client for app postgres database.
+8. prisma:generate:registration_client: this would generate the prima client for registration postgres database.
 
-9. prisma:generate:db_clients: this would generate the prisma client for registration and app databases.
+9. prisma:generate:app_client: this would generate the prisma client for app postgres database.
+
+10. prisma:generate:db_clients: this would generate the prisma client for registration and app databases.
 
 ## Create the .env file
 
